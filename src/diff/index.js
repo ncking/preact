@@ -162,7 +162,7 @@ export function diff(parentDom, newVNode, oldVNode, context, isSvg, excessDomChi
 
 export function commitRoot(mounts, root) {
 	let c;
-	while ((c = mounts.pop())) {
+	while ((c = mounts.shift())) {
 		try {
 			c.componentDidMount();
 		}
